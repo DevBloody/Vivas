@@ -8,13 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using DiscordRpcDemo;
+
 namespace Vivas.Chapter1_Form_Downloaders
 {
     public partial class S3 : Form
     {
+        private DiscordRpc.EventHandlers handlers;
+        private DiscordRpc.RichPresence presence;
         public S3()
         {
             InitializeComponent();
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.presence.details = "Playing Vivas";
+            this.presence.state = "Checking S3 Downloads";
+            this.presence.largeImageKey = "vivasb";
+            this.presence.smallImageKey = "vivass";
+            DiscordRpc.UpdatePresence(ref this.presence);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -45,6 +58,28 @@ namespace Vivas.Chapter1_Form_Downloaders
         private void button6_Click(object sender, EventArgs e)
         {
             Process.Start("3.5 is unavailable to download watch the tutorial from discord.gg/erafn for more details");
+        }
+
+        private void S3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.presence.details = "Playing Vivas";
+            this.presence.state = "In Main";
+            this.presence.largeImageKey = "vivasb";
+            this.presence.smallImageKey = "vivass";
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -91,6 +91,7 @@
     <Compile Include="Chapter1_Form_Downloaders\Season2.Designer.cs">
       <DependentUpon>Season2.cs</DependentUpon>
     </Compile>
+    <Compile Include="DiscordRpcDemo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

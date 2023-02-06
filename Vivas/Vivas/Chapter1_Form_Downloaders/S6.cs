@@ -8,13 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using DiscordRpcDemo;
+
 namespace Vivas.Chapter1_Form_Downloaders
 {
     public partial class S6 : Form
     {
+        private DiscordRpc.EventHandlers handlers;
+        private DiscordRpc.RichPresence presence;
         public S6()
         {
             InitializeComponent();
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.presence.details = "Playing Vivas";
+            this.presence.state = "Checking S6 Downloads";
+            this.presence.largeImageKey = "vivasb";
+            this.presence.smallImageKey = "vivass";
+            DiscordRpc.UpdatePresence(ref this.presence);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,6 +99,28 @@ namespace Vivas.Chapter1_Form_Downloaders
         private void button14_Click(object sender, EventArgs e)
         {
             Process.Start("https://drive.google.com/u/0/uc?id=1lu-Rruktpk8OpfmFRv7Q63lDPffmsQip&export=download");
+        }
+
+        private void S6_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.presence.details = "Playing Vivas";
+            this.presence.state = "In Main";
+            this.presence.largeImageKey = "vivasb";
+            this.presence.smallImageKey = "vivass";
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

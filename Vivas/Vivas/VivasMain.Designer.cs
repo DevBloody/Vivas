@@ -322,6 +322,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VivasMain";
             this.Text = "Vivas | Made By Bloody";
+            this.Load += new System.EventHandler(this.VivasMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

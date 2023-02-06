@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DiscordRpcDemo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,20 @@ namespace Vivas.Chapter1_Form_Downloaders
 {
     public partial class Season2 : Form
     {
+        private DiscordRpc.EventHandlers handlers;
+        private DiscordRpc.RichPresence presence;
         public Season2()
         {
             InitializeComponent();
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.presence.details = "Playing Vivas";
+            this.presence.state = "Checking S2 Downloads";
+            this.presence.largeImageKey = "vivasb";
+            this.presence.smallImageKey = "vivass";
+            DiscordRpc.UpdatePresence(ref this.presence);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,6 +63,28 @@ namespace Vivas.Chapter1_Form_Downloaders
         private void button7_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Download 2.5 With EasyInstaller");
+        }
+
+        private void Season2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.handlers = default(DiscordRpc.EventHandlers);
+            DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
+            this.presence.details = "Playing Vivas";
+            this.presence.state = "In Main";
+            this.presence.largeImageKey = "vivasb";
+            this.presence.smallImageKey = "vivass";
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
