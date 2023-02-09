@@ -53,6 +53,7 @@
             this.button19 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button20 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -289,12 +290,23 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Vivas Is Developed And Created By BloodyYT";
             // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(293, 393);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(157, 35);
+            this.button20.TabIndex = 24;
+            this.button20.Text = "Open Ghost Launcher";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
             // VivasMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button20);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button19);
@@ -354,5 +366,6 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button20;
     }
 }

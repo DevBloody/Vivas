@@ -160,5 +160,10 @@ namespace Vivas
         {
 
         }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd", "/c GhostV2.exe");
+        }
     }
 }
