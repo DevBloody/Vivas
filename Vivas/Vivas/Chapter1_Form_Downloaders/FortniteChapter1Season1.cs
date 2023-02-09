@@ -73,6 +73,9 @@ namespace Vivas.Chapter1_Form_Downloaders
 
         private void button8_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            VivasMain m = new VivasMain();
+            m.ShowDialog();
             this.handlers = default(DiscordRpc.EventHandlers);
             DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
             this.handlers = default(DiscordRpc.EventHandlers);

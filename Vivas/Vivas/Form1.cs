@@ -24,8 +24,8 @@ namespace Vivas
             DiscordRpc.Initialize("1033376019572342936", ref this.handlers, true, null);
             this.presence.details = "Playing Vivas";
             this.presence.state = "Reading Vivas Info...";
-            this.presence.largeImageKey = "vivasB";
-            this.presence.smallImageKey = "vivasS";
+            this.presence.largeImageKey = "vivasb";
+            this.presence.smallImageKey = "vivass";
             DiscordRpc.UpdatePresence(ref this.presence);
 
         }
